@@ -1,0 +1,47 @@
+<!----------------------- Main Container -------------------------->
+<div class="container">
+   <div class="row">
+      <!-- Left Container -->
+      <div class="col-md-4" id="left-box">
+         <app-product-list (onProductClick)="populateProductDetails($event)"
+            [products]="productList"></app-product-list>
+      </div>
+      <!-- Right Container -->
+      <div class="col-md-8" id="right-box">
+         <div class="container">
+            <div class="rounded-3" id="detail-panel">
+               <div *ngIf="selectedProduct.productAlias>0; else blank_details_placeholder">
+                  <div class="row">
+                     <div class="col-md-11 mat-display-1" style="padding-left: 3rem;">Product Information</div>
+                     <div class="col-md-1 float-end"><mat-icon color="primary"
+                           (click)="openEditProduct(selectedProduct)">create</mat-icon></div>
+                  </div>
+                  <div style="padding-left: 2rem; padding-right: 2rem;">
+                     <div class="mat-title">Product Name</div>
+                     <div class="mat-subheading-2 detail-text-style">{{selectedProduct.productName}}</div>
+                     <div class="mat-title">Product Alias</div>
+                     <div class="mat-subheading-2 detail-text-style">{{selectedProduct.productAlias}}</div>
+                     <div class="mat-title ">Marketing Group</div>
+                     <div class="mat-subheading-2 detail-text-style">{{selectedProduct.marketingGroup}}</div>
+                     <div class="mat-title">Vendor</div>
+                     <div class="mat-subheading-2 detail-text-style">{{selectedProduct.vendor ?? "Not Mentioned"}}</div>
+                  </div>
+               </div>
+               <ng-template #blank_details_placeholder>
+                  <div class="mat-headline text-center" id="blank_placeholder">
+                     Please select a product to view details
+                  </div>
+               </ng-template>
+            </div>
+            <div style="padding:5px;">
+            </div>
+            <div class="justify-content-end rounded-3" id="button-panel">
+               <button mat-raised-button color="primary" class="float-start" (click)="openUploadProductDialog()">Upload
+                  CSV</button>
+               <button mat-raised-button color="primary" class="float-end" (click)="openAddProduct()">Add
+                  Item</button>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

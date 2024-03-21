@@ -1,0 +1,7 @@
+<div *ngFor="let prod of products; index as i">
+    <div (click)="onSelectingProduct(prod, i)" class="container rounded-2 shadow"  
+        style="padding-top: 5px; padding-bottom: 5px;">
+        <div class="mat-body-2">{{prod.productName}}</div>
+        <div class="mat-body-1" style="color: grey;">Product Alias: {{prod.productAlias}}</div>
+    </div>
+</div>

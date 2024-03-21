@@ -1,0 +1,24 @@
+<div>
+  <h1>Add Product</h1>
+</div>
+<form>
+  <div class="form-group gap">
+    <label for="productName">Product Name (*)</label>
+    <input type="text" class="form-control" id="productName" [(ngModel)]="prod.productName" name="productName">
+  </div>
+  <div class="form-group gap">
+    <label for="productAlias">Product Alias (*)</label>
+    <input type="number" class="form-control" id="productAlias" [(ngModel)]="prod.productAlias" name="productAlias">
+  </div>
+  <div class="form-group gap">
+    <label for="marketingGroup">Marketing Group</label>
+    <input type="text" class="form-control" id="marketingGroup" [(ngModel)]="prod.marketingGroup" name="marketingGroup">
+  </div>
+  <div class="form-group gap">
+    <label for="vendor">Vendor</label>
+    <input type="text" class="form-control" id="vendor" [(ngModel)]="prod.vendor" name="vendor">
+  </div>
+  <div class="gap">
+    <button type="submit" mat-raised-button color="primary" (click)="onSave()">Save</button>
+  </div>
+</form>

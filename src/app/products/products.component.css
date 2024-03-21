@@ -1,0 +1,30 @@
+#left-box{
+    height:90vh;
+    overflow-y:scroll;
+    background-color: whitesmoke;
+}
+#right-box{
+    padding: 10px;
+    background-color: whitesmoke;
+    height: 90vh;
+}
+#button-panel{
+    padding: 10px;
+    background-color: white;
+    height: 10vh;
+}
+#detail-panel{
+    padding: 10px;
+    background-color: white;
+    height: 75vh;
+}
+#blank_placeholder{
+    color: rgb(176, 174, 174);
+}
+.detail-text-style{
+    color: rgb(144, 7, 186);
+    margin: 0;
+}
+.mat-title{
+    margin: 1px;
+}

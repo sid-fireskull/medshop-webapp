@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>Upload File</h1>
+    <form>
+        <div class="form-group gap">
+            <input type="file" class="form-control" id="file" (change)="onFileSelected($event)" name="file">
+        </div>
+        <div class="gap float-end">
+            <button type="submit" mat-raised-button color="primary" (click)="onSave()">Upload</button>
+        </div>
+    </form>
+</div>

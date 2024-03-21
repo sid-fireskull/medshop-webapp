@@ -1,0 +1,42 @@
+
+    <!----------------------- Main Container -------------------------->
+
+     <div class="container d-flex justify-content-center align-items-center min-vh-100">
+
+    <!----------------------- Login Container -------------------------->
+
+       <div class="row border rounded-5 p-3 bg-white shadow box-area">
+
+    <!--------------------------- Left Box ----------------------------->
+
+       <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" 
+            style="background: #c385f9;">
+           <div class="featured-image mb-3">
+            <img src="assets/images/logo.png" class="img-fluid" style="width: 200px;">
+           </div>
+           <p class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 600;">Be Verified</p>
+           <small class="text-white text-wrap text-center" style="width: 17rem;font-family: 'Courier New', Courier, monospace;">Please, Login to manage orders </small>
+       </div> 
+
+    <!-------------------- ------ Right Box ---------------------------->
+        
+       <div class="col-md-6 right-box">
+          <div class="row align-items-center">
+                <div class="mat-typography mb-4">
+                     <h2>Hello,Again</h2>
+                     <p>We are happy to have you back.</p>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Username" [(ngModel)]="username">
+                </div>
+                <div class="input-group mb-1">
+                    <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password" [(ngModel)]="password">
+                </div>
+                <div class="input-group mb-3 mt-3">
+                    <button mat-raised-button color="primary" class="w-100 fs-6"(click)="handleBasicAuthLogin()">Login</button>
+                </div>
+          </div>
+       </div> 
+
+      </div>
+    </div>

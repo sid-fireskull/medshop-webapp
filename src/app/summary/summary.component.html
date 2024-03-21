@@ -1,0 +1,62 @@
+<div class="container" >
+    <div style="display: flex;">
+        <div class="container" style="flex: 1 1 auto;" *ngIf="dataRows.length>0">
+            <app-graph [dataRows]="dataRows" [productName]="selectedProduct"></app-graph>
+        </div>
+        <div class="container" style="flex: 1 1 auto;" *ngIf="dataRows.length>0">
+            <table id="example" class="table table-striped" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Total Qty</th>
+                        <th>Week 1</th>
+                        <th>Week 2</th>
+                        <th>Week 3</th>
+                        <th>Week 4</th>
+                        <th>Week 5</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <tr *ngFor="let row of dataRows">
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[2] }}</td>
+                        <td>{{ row[3] }}</td>
+                        <td>{{ row[4] }}</td>
+                        <td>{{ row[5] }}</td>
+                        <td>{{ row[6] }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="justify-content-end rounded-3" style="padding-top: 10px; padding-bottom: 10px;" id="button-panel">
+        <button style="margin: 10px;" mat-raised-button color="accent" class="float-end" (click)="downloadCSV()">Export CSV</button>
+        <button style="margin: 10px;" mat-raised-button color="primary" class="float-end"
+            (click)="uploadStocks()">Upload Stocks</button>
+    </div>
+    <div class="container">
+        <table id="myTable" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Product Alias</th>
+                    <th>Stock Quantity</th>
+                    <th>Re-order Quantity</th>
+                    <th>Marketing Group</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of products" (click)="onSelectItem(item)">
+                    <td>{{ item.productName }}</td>
+                    <td>{{ item.productAlias }}</td>
+                    <td>{{ stockMapper.get(item.productAlias) ?? 0 }}</td>
+                    <td><input type="number" class="form-control" id="productAlias" [(ngModel)]="item.reOrderQuantity" name="productAlias"></td>
+                    <td>{{ item.marketingGroup}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

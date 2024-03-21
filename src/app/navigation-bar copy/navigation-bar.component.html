@@ -1,0 +1,17 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="navbar-brand">
+            <img src="/assets/images/logo.png" width="50" height="50" alt="">
+        </div>
+        <ul class="navbar-nav">
+            <li><a *ngIf="authFlag" routerLink="/products" class="nav-link">Products</a></li>
+            <li><a *ngIf="authFlag" routerLink="/sales" class="nav-link">Sales</a></li>
+            <li><a *ngIf="authFlag" routerLink="/summary" class="nav-link">Summary</a></li>
+        </ul>
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li><a *ngIf="!authFlag" routerLink="/login" class="nav-link">Login</a></li>
+            <li><a *ngIf="authFlag" routerLink="/logout" class="nav-link">Logout</a></li>
+        </ul>
+    </nav>
+
+</header>
