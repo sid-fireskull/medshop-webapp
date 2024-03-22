@@ -12,19 +12,29 @@
             <div class="rounded-3" id="detail-panel">
                <div *ngIf="selectedProduct.productAlias>0; else blank_details_placeholder">
                   <div class="row">
-                     <div class="col-md-11 mat-display-1" style="padding-left: 3rem;">Product Information</div>
+                     <div class="col-md-11 h4" style="padding-left: 2.5rem;">Product Information</div>
                      <div class="col-md-1 float-end"><mat-icon color="primary"
                            (click)="openEditProduct(selectedProduct)">create</mat-icon></div>
                   </div>
-                  <div style="padding-left: 2rem; padding-right: 2rem;">
-                     <div class="mat-title">Product Name</div>
-                     <div class="mat-subheading-2 detail-text-style">{{selectedProduct.productName}}</div>
-                     <div class="mat-title">Product Alias</div>
-                     <div class="mat-subheading-2 detail-text-style">{{selectedProduct.productAlias}}</div>
-                     <div class="mat-title ">Marketing Group</div>
-                     <div class="mat-subheading-2 detail-text-style">{{selectedProduct.marketingGroup}}</div>
-                     <div class="mat-title">Vendor</div>
-                     <div class="mat-subheading-2 detail-text-style">{{selectedProduct.vendor ?? "Not Mentioned"}}</div>
+                  <div class="d-grid gap-3" style="padding-left: 2rem; padding-right: 2rem;  padding-top: 4rem;">
+
+                     <div class="p-2">
+                        <div class="h6">Product Name</div>
+                        <div class="mat-subheading-2 detail-text-style">{{selectedProduct.productName}}</div>
+                     </div>
+                     <div class="p-2">
+                        <div class="h6">Product Alias</div>
+                        <div class="mat-subheading-2 detail-text-style">{{selectedProduct.productAlias}}</div>
+                     </div>
+                     <div class="p-2">
+                        <div class="h6">Marketing Group</div>
+                        <div class="mat-subheading-2 detail-text-style">{{selectedProduct.marketingGroup}}</div>
+                     </div>
+                     <div class="p-2">
+                        <div class="h6">Vendor</div>
+                        <div class="mat-subheading-2 detail-text-style">{{selectedProduct.vendor ?? "Not Mentioned"}}
+                        </div>
+                     </div>
                   </div>
                </div>
                <ng-template #blank_details_placeholder>
