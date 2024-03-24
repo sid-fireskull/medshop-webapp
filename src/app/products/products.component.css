@@ -19,6 +19,7 @@
     height: 75vh;
 }
 #blank_placeholder{
+    margin-top: 13rem;
     color: rgb(176, 174, 174);
 }
 .detail-text-style{
