@@ -5,14 +5,15 @@ import { ProductsComponent } from './products/products.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { SalesComponent } from './sales/sales.component';
 import { SummaryComponent } from './summary/summary.component';
+import { authGuard } from './services/route-guard.service';
 
 const routes: Routes = [
-  {path:'', component: LoginComponent},
-  {path:'login',  component:LoginComponent},
-  {path:'products',  component:ProductsComponent},
-  {path:'product/:id',  component:EditProductComponent},
-  {path:'sales',  component:SalesComponent},
-  {path:'summary',  component:SummaryComponent},
+  { path: '', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'products', component: ProductsComponent, canActivate: [authGuard] },
+  { path: 'product/:id', component: EditProductComponent, canActivate: [authGuard] },
+  { path: 'sales', component: SalesComponent, canActivate: [authGuard] },
+  { path: 'summary', component: SummaryComponent, canActivate: [authGuard] },
 ];
 
 @NgModule({
