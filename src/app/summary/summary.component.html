@@ -1,4 +1,4 @@
-<div class="container" >
+<div class="container">
     <div style="display: flex;">
         <div class="container" style="flex: 1 1 auto;" *ngIf="dataRows.length>0">
             <app-graph [dataRows]="dataRows" [productName]="selectedProduct"></app-graph>
@@ -32,11 +32,12 @@
         </div>
     </div>
     <div class="justify-content-end rounded-3" style="padding-top: 10px; padding-bottom: 10px;" id="button-panel">
-        <button style="margin: 10px;" mat-raised-button color="accent" class="float-end" (click)="downloadCSV()">Export CSV</button>
+        <button style="margin: 10px;" mat-raised-button color="accent" class="float-end" (click)="downloadCSV()">Export
+            CSV</button>
         <button style="margin: 10px;" mat-raised-button color="primary" class="float-end"
             (click)="uploadStocks()">Upload Stocks</button>
     </div>
-    <div class="container">
+    <div class="container" *ngIf="products.length > 0">
         <table id="myTable" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-bordered">
             <thead>
                 <tr>
@@ -52,7 +53,8 @@
                     <td>{{ item.productName }}</td>
                     <td>{{ item.productAlias }}</td>
                     <td>{{ stockMapper.get(item.productAlias) ?? 0 }}</td>
-                    <td><input type="number" class="form-control" id="productAlias" [(ngModel)]="item.reOrderQuantity" name="productAlias"></td>
+                    <td><input type="number" class="form-control" id="productAlias" [(ngModel)]="item.reOrderQuantity"
+                            name="productAlias"></td>
                     <td>{{ item.marketingGroup}}</td>
                 </tr>
             </tbody>

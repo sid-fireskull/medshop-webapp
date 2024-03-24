@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatIconModule} from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatProgressBarModule} from '@angular/material/progress-bar'; 
 
 const matComponents = [
   MatSlideToggleModule,
@@ -14,7 +15,8 @@ const matComponents = [
   MatDialogModule,
   MatButtonModule,
   MatIconModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatProgressBarModule
 ];
 
 @NgModule({

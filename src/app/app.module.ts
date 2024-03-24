@@ -22,8 +22,6 @@ import { HttpInterceptorBasicAuthService } from './services/http/http-intercepto
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DataTablesModule } from 'angular-datatables';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
