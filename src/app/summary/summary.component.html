@@ -37,7 +37,7 @@
         <button style="margin: 10px;" mat-raised-button color="primary" class="float-end"
             (click)="uploadStocks()">Upload Stocks</button>
     </div>
-    <div class="container" *ngIf="products.length > 0">
+    <div class="container">
         <table id="myTable" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-bordered">
             <thead>
                 <tr>
