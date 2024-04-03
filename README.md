@@ -8,6 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Technology Used
 Frontend: Angular 17.1.2
+ and 
 Backend: Springboot 3.1.5
 
 ## Here is some screenshot of the application
