@@ -1,27 +1,26 @@
-# MedshopWebapp
+# Medicine Shop Web Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
+This is a simple web application intended for to create CSV file for re-order quantity based on the previous 6 month sales & Current stock
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Technology Used
+Frontend: Angular 17.1.2
+Backend: Springboot 3.1.5
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Here is some screenshot of the application
 
-## Build
+### Login Screen
+![login_screen](https://github.com/sid-fireskull/medshop-webapp/assets/26095875/d6191c5c-cb90-4ac3-be58-33495f0d8b7e)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Product Screen
+![product_screen](https://github.com/sid-fireskull/medshop-webapp/assets/26095875/fc2c7313-1ce7-4a94-8e19-3078fe35d53c)
 
-## Running unit tests
+### Sales Upload Screen
+![sales_screen](https://github.com/sid-fireskull/medshop-webapp/assets/26095875/450f3880-fdcd-4d4d-8484-8b1ef38c3074)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Summary Screen
+![summary_screen](https://github.com/sid-fireskull/medshop-webapp/assets/26095875/23d7252e-3af6-4beb-87f9-0d6f3ee11aec)
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
